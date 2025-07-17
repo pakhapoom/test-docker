@@ -5,9 +5,9 @@ from fastapi.templating import Jinja2Templates
 
 
 app = FastAPI()
-templates = Jinja2Templates(directory="frontend/templates")
+templates = Jinja2Templates(directory="templates")
 
-BACKEND_URL = "http://localhost:5001/greet"
+BACKEND_URL = "http://backend:5001/greet"
 
 @app.get("/", response_class=HTMLResponse)
 async def get_form(request: Request):
