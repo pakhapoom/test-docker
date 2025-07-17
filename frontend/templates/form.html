@@ -1,15 +1,48 @@
 
 <!doctype html>
-<title>Greet User</title>
+<title>Greetings</title>
 <style>
-    body { display: flex; justify-content: center; align-items: center; height: 100vh; }
-    .center-container { text-align: center; }
+    body { display: flex; justify-content: center; align-items: center; height: 100vh; background: #f7f7f7; }
+    .center-container { 
+        text-align: center; 
+        background: #fff; 
+        padding: 2rem 3rem; 
+        border-radius: 12px; 
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08); 
+    }
+    input[type="text"] {
+        padding: 0.6rem 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        width: 220px;
+        transition: border-color 0.2s;
+        outline: none;
+    }
+    input[type="text"]:focus {
+        border-color: #0078d7;
+    }
+    input[type="submit"] {
+        padding: 0.6rem 1.5rem;
+        background: #0078d7;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+        margin-left: 0.5rem;
+    }
+    input[type="submit"]:hover {
+        background: #005fa3;
+    }
 </style>
 <div class="center-container">
-    <h2>Enter your name:</h2>
+    <h2>Please enter your name</h2>
     <form method="post">
         <input type="text" name="username" required>
-        <input type="submit" value="Log in">
+        <input type="submit" value="Submit">
     </form>
     {% if result %}
         <h3>{{ result }}</h3>
